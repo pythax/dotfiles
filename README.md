@@ -3,5 +3,5 @@
 ## Install
 
 ```sh
-git clone https://github.com/yourname/dotfiles.git && ./dotfiles/setup
+git clone https://github.com/pythax/dotfiles.git && ./dotfiles/setup
 ```
