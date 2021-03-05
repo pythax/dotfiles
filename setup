@@ -78,10 +78,14 @@ after_symlink() {
 	printf '\n\033[1;7;33m%s\033[0m\n' 'After symlink step'
 
 	# Change default shell
-	chsh -s '/usr/local/bin/zsh'
+	if [ ! "$BASH" ]; then
+		chsh -s '/usr/local/bin/zsh'
+	fi
 
 	# Enable firewall
-	#$PERMISSION_COMMAND ufw enable
+	if [ -x "$(command -v ufw)" ]; then
+		$PERMISSION_COMMAND ufw enable
+	fi
 }
 
 
