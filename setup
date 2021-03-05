@@ -110,8 +110,7 @@ PERMISSION_COMMAND='sudo' # You can change this to doas
 Homebrew_MARK='HBR'; Homebrew_PM='brew'        ; Homebrew_COMMAND="$Homebrew_PM install"
     Snap_MARK='SNA';     Snap_PM='snap'        ;     Snap_COMMAND="$PERMISSION_COMMAND $Snap_PM install"
 
-case $(uname -s | sed -e 's/[[:upper:]]/\L&/g') in
-	'darwin'*)
+case $(uname -s | sed -e 's/[[:upper:]]/&/g') in 'Darwin'*)
 		PACKAGEMANAGER_MAIN='Homebrew'
 	;;
 	*)
