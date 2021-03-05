@@ -59,7 +59,7 @@ before_symlink() {
 	printf '\n\033[1;7;33m%s\033[0m\n' 'Before symlink step'
 
 	# Remove files that may conflict when symlink dotfiles
-	rm .bashrc
+	rm "$HOME/.bashrc" "$HOME/.zshrc"
 
 	# Remove conflicting items in $HOME/.config
 	[ -d "$HOME/.config" ] && for config_directory_path in "$HOME/.config/."* "$HOME/.config/"*; do
